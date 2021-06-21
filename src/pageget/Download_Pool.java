@@ -40,7 +40,7 @@ public class Download_Pool implements Runnable{
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("**** Termino hilo ****");
+        //System.out.println("**** Termino hilo ****");
     }
     
 }

@@ -106,7 +106,7 @@ public class PageDownload extends Thread{
                 ArrayList <String> no_necesarios = new ArrayList();
                 no_necesarios.addAll(this.alreadyDownloaded);
                 no_necesarios.addAll(redirecciones_paginas);
-                System.out.println("Inicio de hilo...");
+                //System.out.println("Inicio de hilo...");
                 this.pool.execute(new Download_Pool(redirecciones_pagina, ruta, no_necesarios));
             }
         }
@@ -145,9 +145,9 @@ public class PageDownload extends Thread{
         if(!this.alreadyDownloaded.contains(getFileName(archivoN.getAbsolutePath()))){
             try{
                 InputStream in = URL_opts.getPag_conexion().getInputStream(); 
-                //System.out.println("Ruta de la pagina descargada: ");
+                System.out.println("Ruta de la pagina descargada: ");
 
-                //System.out.println(archivoN.getAbsolutePath());
+                System.out.println(archivoN.getAbsolutePath());
                 Path path = Paths.get(archivoN.getAbsolutePath());
 
                 Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);

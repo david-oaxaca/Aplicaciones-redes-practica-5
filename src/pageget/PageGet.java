@@ -38,7 +38,7 @@ public class PageGet {
         
         //PageGet "Uploads" directory creation
         
-        File ruta = Archivo_opts.crearArchivo(new File("").getAbsolutePath(), "/Uploads");
+        File ruta = Archivo_opts.crearArchivo(new File("").getAbsolutePath(), "/Downloads");
         //String rutaAbsoluta = ruta.getAbsolutePath();
          String command = "";
         
