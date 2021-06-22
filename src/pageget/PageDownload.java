@@ -106,7 +106,6 @@ public class PageDownload extends Thread{
                 ArrayList <String> no_necesarios = new ArrayList();
                 no_necesarios.addAll(this.alreadyDownloaded);
                 no_necesarios.addAll(redirecciones_paginas);
-                //System.out.println("Inicio de hilo...");
                 this.pool.execute(new Download_Pool(redirecciones_pagina, ruta, no_necesarios));
             }
         }
